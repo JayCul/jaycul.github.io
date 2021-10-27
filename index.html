@@ -15,57 +15,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap">
         <link rel="stylesheet" href="./css/bootstrap.css">
         <link rel="stylesheet" href="./css/bootstrap-grid.css">
-        <link rel="stylesheet" href="./css/style.css">        
+        <link rel="stylesheet" href="./css/style.css">  
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
 
         <script src="./js/jquery-3.3.1.min.js"></script>
         
-        <!-- 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#con").click(function () {
-                    phone = $("#fname").val();
-                    phone = $("#phone").val();
-                    emailer = $("#emailer").val();
-                    message = $("#message").val();
-                    $.ajax({
-                        type: "POST",
-                        url: "sendmsg.php",
-                        data:
-                            "fname=" +
-                            fname +
-                            "&phone=" +
-                            phone +
-                            "&emailer=" +
-                            emailer +
-                            "&message=" +
-                            message,
-                        success: function (html) {
-                            if (html == "true") {
-                                $("#add_err2").html(
-                                    '<div class="alert alert-success"> \
-                                                                    <strong>Message Sent!</strong>  \
-                                                                    </div>'
-                                );
-                                } else {
-                                $("#add_err2").html(
-                                    '<div class="alert alert-danger"> \
-                                                                    <strong>Error</strong> processing request. Please try again.  \
-                                                                    </div>'
-                                );
-                                }
-                            },
-                             beforeSend: function () {
-                                $("#add_err2").html("<p>loading...</p>");
-                                
-                            },
-                    });
-                    return false;
-                });
-                return false;
-            });
-        </script> -->
+        
     </head>
 <body>
 
@@ -82,19 +38,15 @@
             <ul class="navigation__list">
                 <li class="navigation__item"><a href="#about" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Profile</a></li>
                 <li class="navigation__item"><a href="#abilities" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Abilities</a></li>
+                <li class="navigation__item"><a href="#popup" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Qualities</a></li>
                 <li class="navigation__item"><a href="#work" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Work</a></li>
                 <li class="navigation__item"><a href="#contact" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Contact</a></li>
-                <li class="navigation__item"><a href="#popup" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Imprint</a></li>
-
             </ul>
         </nav>
     </div>
 
     
     <header class="header">
-        <!-- <div class="header__logo-box">
-            <img src="./img/logo-lone.png" alt="Logo" class="header__logo">
-        </div> -->
         <div class="header__text-box">
             <h1 class="heading-primary">
                 <span class="heading-primary--main">Justin Nnaka's</span>
@@ -102,13 +54,6 @@
             </h1>
         </div>   
     </header>
-
-    <!--
-       <svg class="about-svg">
-                <use xlink:href="img/content/semi-circle.svg"></use>
-            </svg>  
-        <img class="about-svg" src="./img/content/Semicircle.svg" alt="">
-    -->
 
     <section class="section-about">
         <div class="about" id="about">
@@ -134,6 +79,11 @@
                                 <li class="about-span-list-item">Data Analysis and Machine learning (A.I) </li>
                                 <li class="about-span-list-item">Graphics Design</li>
                             </ul>
+                            <a href="#popup" class="about-more" >
+                                <button class=" btnn btnn--blue">
+                                    Read more...
+                                </button>
+                            </a>
                             
                         </span>
                     </div>
@@ -162,15 +112,23 @@
                                         <b>DoB</b>
                                     </div>
                                     <div class="about-details__answer">
-                                        6<sup>th</sup> July
+                                        6<sup>th</sup> July, 1999.
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="about-details__id">
-                                        <b>Fav. color</b>
+                                        <b>Gender</b>
                                     </div>
                                     <div class="about-details__answer">
-                                        Orange
+                                        Male
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="about-details__id">
+                                        <b>Nationality</b>
+                                    </div>
+                                    <div class="about-details__answer">
+                                        Nigerian
                                     </div>
                                 </div>
                                 <div class="row">
@@ -194,7 +152,8 @@
                                         <b>Passion</b>
                                     </div>
                                     <div class="about-details__answer">
-                                        Problem solving, Graphics observation.
+                                        Problem solving, Graphics observation/Playing Video games
+                                        and hangouts.
                                     </div>
                                 </div>
                                     
@@ -443,7 +402,29 @@
                 <div class="heading-WOW__name heading-WOW__name_footer"> ~<b> Rod Mckuen</b></div>
             </div>
             <div class="row">
-                <div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <form id="pingForm" class="pingForm">
+                        <div id="loader" class="contact-loader">loading...</div>
+                        <div class="form-group">
+                            <input type="text" minlength="2" maxlength="20" class="contact-form__input contact-form__group contact-form__group-1" placeholder="Name" id="fname" name="fname" required>
+                            <label for="fname" class="contact-form__label">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" minlength="6" maxlength="20" class="contact-form__input contact-form__group" placeholder="Mobile Number" id="phone" name="phone" required>
+                            <label for="phone" class="contact-form__label">Mobile Number</label>    
+                        </div>
+                        <div class="form-group">
+                            <input type="email" minlength="6" maxlength="30" class="contact-form__input contact-form__group" placeholder="Email address" id="emailer" name="emailer" required>
+                            <label for="emailer" class="contact-form__label">Email address</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea type="text" minlength="6" maxlength="150" class="contact-form__input  contact-form__group" placeholder="Your Message" id="message" name="message" rows="3" required></textarea>
+                            <label for="text" class="contact-form__label contact-form__group">Your Message</label>
+                        </div>                        
+                        <button type="submit" name="submit"  value="submit" class="btnn btnn-white btnn--blue contact-form__submit" >SEND</button>  <!--onclick="send"--->
+                    </form>
+                </div>
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     If you want to collaborate and make magic in an amazing experience &ndash; you're very welcome to contact me.
                     <p>I'm available for freelance projects, part-time and full-time employment.</p>
                     <div class="contact-details">
@@ -456,16 +437,12 @@
                         </div>
     
                         <div class="contact-details__imprint">
-                            <a href="#popup" class="btnn-text" >
-                                <a href="MyCV.pdf" download><img class="contact-download" src="./img/DownloadCv.png" alt="DownloadCv"></a>
-                                <button class=" btnn btnn--blue">
-                                    IMPRINT
-                                </button>
-                            </a>
+                            <a href="MyCV.pdf" download><img class="contact-download" src="./img/DownloadCv.png" alt="DownloadCv"></a>
+                            
                         </div>
                         
                     </div>
-                </div>
+                </span>
             </div>    
         </div>
     </section>
@@ -485,37 +462,32 @@
     <div class="popup" id="popup">
         <div class="popup-content">
             <div class="popup-content__heading">
-                <a href="#contact" class="popup__close">×</a>
-                <h3 class="popup-heading">Imprint</h3>
+                <a href="#about" class="popup__close">×</a>
+                <h3 class="popup-heading">Qualities</h3>
             </div>
             <div class="popup-content__text"></div>
                 Justin Nnaka <br>
                 Ejigbo, Lagos State <br>
                 Nigeria. <br>
-                <a class="popup-content__text-link" href="#">justincul01@gmail.com</a>
+                <a class="popup-content__text-link" href="#">jaystechub@gmail.com</a>
 
-                <h5>Content</h5>
-                <span>Justin Nnaka reserves the right not to be responsible for the topicality,
-                    correctness, completeness or quality of the information provided. Liability
-                    claims regarding damage caused by the use of any information provided, including 
-                    any kind of information which is incomplete or incorrect,will therefore be rejected. 
-                    All offers are not-binding and without obligation. Parts of the pages or the 
-                    complete publication including all offers and information might be extended, 
-                    changed or partly or completely deleted by the author without separate announcement. 
+                <h5>General</h5>
+                <span>Justin Nnaka a well-behaved youth endowed with the willingness to obey any chain of command irrespective 
+                    of the status quo, a passion to learn exciting new things and apply them in real-world scenerios
+                    paired with the kick to resolve bugs/sneaks and a swift response to assimilation of theories and 
+                    practicals.                 
+
                 </span>
-                <h5>Referrals and Links</h5>
-                <span>Justin Nnaka is not responsible for any contents linked or referred to from this pages
-                     - unless Justin Nnaka has full knowledge of illegal contents and would be able to prevent
-                      the visitors of Justin Nnaka's site from viewing those pages. If any damage occurs by 
-                      the use of information presented there, only the author of the respective pages might be 
-                      liable, not the one who has linked to these pages. Furthermore Justin Nnaka is not liable 
-                      for any postings or messages published by users of discussion boards, guestbooks or mailinglists
-                        provided on his page.  
+                <h5>Widely knowledgable</h5>
+                <span>Justin Nnaka is also knowledgeable in vast arts and fields of graphical design, hardware and software
+                    functions which breeds the confidence to explore, manipulate and basically get a hands-on experience when
+                     incidents like device malfunctions or breakdowns occur in such areas. 
+                <p>He is also gifted with excellent communication skils in both spoken and written grammar as you might have 
+                    picked up from the composition of this webpage.</p>
                 </span>
-                <h5>Legal Validity of this disclaimer</h5>
-                <span>This disclaimer is to be regarded as part of the internet publication which you were referred from.
-                     If sections or individual terms of this statement are not legal or correct, the content or validity 
-                     of the other parts remain uninfluenced by this fact. 
+                <h5>Recommendations</h5>
+                <span>Justin Nnaka has recieved commendations from his peers as well as the more matured populace he interacts 
+                    with due to his character, aura and association.
                 </span>
             </div>
         </div>
@@ -524,5 +496,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="./main.js"></script>
-    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
