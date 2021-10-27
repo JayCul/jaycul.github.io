@@ -1,1 +1,528 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Justincul">
+        <meta name="description" content="I&#39;m Nnaka Justin, a ninja webdeveloper / creative programmer with good knowledge of front-end technics.">
+        <meta name="keywords" content="Nnaka Justin, Justincul, Interactive Resume, Web developer, Startup, Interactive CV, Resume, CV, Whoopaa, HRMatches">
+        <meta name="robots" content="index, follow">
+        <meta name="revisit-after" content="14 days">
+
+        <title>Justincul's Bio - Web Developer - Nnaka Justin's Resumé</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/bootstrap-grid.css">
+        <link rel="stylesheet" href="./css/style.css">        
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        
+        <!-- 
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#con").click(function () {
+                    phone = $("#fname").val();
+                    phone = $("#phone").val();
+                    emailer = $("#emailer").val();
+                    message = $("#message").val();
+                    $.ajax({
+                        type: "POST",
+                        url: "sendmsg.php",
+                        data:
+                            "fname=" +
+                            fname +
+                            "&phone=" +
+                            phone +
+                            "&emailer=" +
+                            emailer +
+                            "&message=" +
+                            message,
+                        success: function (html) {
+                            if (html == "true") {
+                                $("#add_err2").html(
+                                    '<div class="alert alert-success"> \
+                                                                    <strong>Message Sent!</strong>  \
+                                                                    </div>'
+                                );
+                                } else {
+                                $("#add_err2").html(
+                                    '<div class="alert alert-danger"> \
+                                                                    <strong>Error</strong> processing request. Please try again.  \
+                                                                    </div>'
+                                );
+                                }
+                            },
+                             beforeSend: function () {
+                                $("#add_err2").html("<p>loading...</p>");
+                                
+                            },
+                    });
+                    return false;
+                });
+                return false;
+            });
+        </script> -->
+    </head>
+<body>
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#about" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Profile</a></li>
+                <li class="navigation__item"><a href="#abilities" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Abilities</a></li>
+                <li class="navigation__item"><a href="#work" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Work</a></li>
+                <li class="navigation__item"><a href="#contact" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Contact</a></li>
+                <li class="navigation__item"><a href="#popup" class="navigation__link" onclick="document.getElementById('navi-toggle').checked = false"> Imprint</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    
+    <header class="header">
+        <!-- <div class="header__logo-box">
+            <img src="./img/logo-lone.png" alt="Logo" class="header__logo">
+        </div> -->
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Justin Nnaka's</span>
+                <span class="heading-primary--sub">Resumé</span>
+            </h1>
+        </div>   
+    </header>
+
+    <!--
+       <svg class="about-svg">
+                <use xlink:href="img/content/semi-circle.svg"></use>
+            </svg>  
+        <img class="about-svg" src="./img/content/Semicircle.svg" alt="">
+    -->
+
+    <section class="section-about">
+        <div class="about" id="about">
+            <div class="heading-about">   
+                <h2 class="heading-secondary">
+                    Profile
+                </h2>
+            </div>
+            <div class="heading-WOW">
+                <div class="heading-WOW__quote">"Be yourself. Everyone else is taken"</div>
+                <div class="heading-WOW__name"> ~<b> Oscar Wilde</b></div>
+            </div>
+            <div class="about-content row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">    
+                    <div class="about-main">
+                        <h3>About</h3>
+                        <span class="about-span about-span__1"><p> Hi! I'm Justin, <br>
+                            <p></p> A young and vibrant enthusiast by nature, tech guru, today's year old and a Bachelor of Engineering from the University of Nigeria, Nsukka.
+                            My specialities are :
+                            <ul class="about-span-list">
+                                <li class="about-span-list-item">Web design and development</li>
+                                <li class="about-span-list-item">Software and Hardware Engineering</li>
+                                <li class="about-span-list-item">Data Analysis and Machine learning (A.I) </li>
+                                <li class="about-span-list-item">Graphics Design</li>
+                            </ul>
+                            
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="about-polygon">
+                        <img class="about-photo" src="./img/Justin.jpg" alt="Justin">
+                    </div>
+                </div>
+                
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="about-details">
+                        <h3>Personal Information</h3>
+                        <div class="about-span">
+                            <div class="about-roww">
+                                <div class="row">
+                                    <div class="about-details__id">
+                                        <b>Name</b>
+                                    </div>
+                                    <div class="about-details__answer">
+                                        Nnaka Justin Tochukwu
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="about-details__id">
+                                        <b>DoB</b>
+                                    </div>
+                                    <div class="about-details__answer">
+                                        6<sup>th</sup> July
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="about-details__id">
+                                        <b>Fav. color</b>
+                                    </div>
+                                    <div class="about-details__answer">
+                                        Orange
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="about-details__id">
+                                        <b>Location</b>
+                                    </div>
+                                    <div class="about-details__answer">
+                                        Lagos, Nigeria, Earth.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="about-details__id">
+                                        <b>Language</b>
+                                    </div>
+                                    <div class="about-details__answer">
+                                        English, Igbo Language.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="about-details__id">
+                                        <b>Passion</b>
+                                    </div>
+                                    <div class="about-details__answer">
+                                        Problem solving, Graphics observation.
+                                    </div>
+                                </div>
+                                    
+                            </div>
+                            
+                            <div class="about-social">
+                                <a href="https://wwww.facebook.com/nnaka.justin"><ion-icon class="about-social__icon icon__fb" name="logo-facebook"></ion-icon></a>
+                                <a href="https://www.twitter.com/justincul"><ion-icon class="about-social__icon icon__twitter" name="logo-twitter"></ion-icon></a>
+                                <a href="http://wa.me/2347035220770?text=Hi%20can%20we%20collaborate,%20I%27m"><ion-icon class="about-social__icon icon__wa" name="logo-whatsapp"></ion-icon></a>
+                                <a href="https://instagram.com/justencul"><ion-icon class="about-social__icon icon__i" name="logo-instagram"></ion-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-abilities">
+        <div class="abilities" id="abilities">
+            <div class="heading-abilities">
+                <h2 class="heading-secondary">
+                    Abilities
+                </h2>
+            </div>
+            <div class="heading-WOW">
+                <div class="heading-WOW__quote">"All our knowledge begins with experience"</div>
+                <div class="heading-WOW__name"> ~<b> Immanuel Kant</b></div>
+            </div>
+
+            <div class="abilities-content">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 abilities-skills">
+                        <h3>Skills</h3>
+                        <div class="abilities-web">
+                            <span><b>Web Developement</b></span><br>
+                            <div class="abilities-web__icons">
+                                <div class="row">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <img class="abilities-web__icon" src="./img/Logos/html-5.png" alt="html logo">
+                                        <img class="abilities-web__icon" src="./img/Logos/react.png" alt="html logo"> 
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <img class="abilities-web__icon" src="./img/Logos/css3.png" alt="html logo">
+                                        <img class="abilities-web__icon" src="./img/Logos/bootstrap-5.png" alt="html logo">
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <img class="abilities-web__icon" src="./img/Logos/javascript.png" alt="html logo">
+                                        <img class="abilities-web__icon" src="./img/Logos/MongoDB.png" alt="html logo">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="abilities-graphics">
+                            <span><b>Graphics Design</b></span><br>
+                            <div class="abilities-graphics__icons">
+                                <div class="container">
+                                    <img class="abilities-web__icon abilities-web__icon-1" src="./img/Logos/adobe-illustrator-cc.png" alt="html logo">
+                                    <img class="abilities-web__icon abilities-web__icon-2" src="./img/Logos/adobe-photoshop-cc.png" alt="html logo">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="abilities-ai">
+                            <span><b>Machine learning and Data Analysis</b></span><br>
+                            <div class="abilities-ai__icons">
+                                <img class="abilities-web__icon" src="./img/Logos/jupyter.png" alt="html logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <h3>Tools / Mastery</h3>
+                        <div class="abilities-web__tools">    
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    Visual Studio Code
+                                </div>
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    Chrome
+                                </div>
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    Node / NPM
+                                </div>
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    PostMan
+                                </div>
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    React
+                                </div>
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 52%" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    MongoDB
+                                </div>
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 55%; background-color: #70c918;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="abilities-graphics__tools">
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    Adobe Illustrator
+                                </div>
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 70%; background-color: #ff3c00 !important;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    Adobe Photoshop
+                                </div>
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="abilities-ai__tools">
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    Jupyter
+                                </div>
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%; background-color: brown !important;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-work">
+        <div class="work" id="work">
+            <div class="heading-work">
+                <h2 class="heading-secondary">
+                    work
+                </h2>
+            </div>
+            <div class="heading-WOW">
+                <div class="heading-WOW__quote">"Work hard in silence; let success make the noise"</div>
+                <div class="heading-WOW__name"> ~<b> Frank Ocean</b></div>
+            </div>
+            <div class="work-show">
+                
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-indicators work-show__flow">
+                    <button type="button" data-target="#carouselExampleIndicators" data-bs-target="#carouselExampleIndicators" data-slide-to="0" class="active" aria-current="true" ></button>
+                    <button type="button" data-target="#carouselExampleIndicators" data-bs-target="#carouselExampleIndicators" data-slide-to="1"></button>
+                    <button type="button" data-target="#carouselExampleIndicators" data-bs-target="#carouselExampleIndicators" data-slide-to="2"></button>
+                    <button type="button" data-target="#carouselExampleIndicators" data-bs-target="#carouselExampleIndicators" data-slide-to="3"></button>
+                    <button type="button" data-target="#carouselExampleIndicators" data-bs-target="#carouselExampleIndicators" data-slide-to="4"></button>
+                    <button type="button" data-target="#carouselExampleIndicators" data-bs-target="#carouselExampleIndicators" data-slide-to="5"></button>
+                    <button type="button" data-target="#carouselExampleIndicators" data-bs-target="#carouselExampleIndicators" data-slide-to="6"></button>
+                    <button type="button" data-target="#carouselExampleIndicators" data-bs-target="#carouselExampleIndicators" data-slide-to="7"></button>
+
+                    </div>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./img/img-1.png" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/img-2.png" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/img-3.png" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/img-4.png" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/img-5.png" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/img-6.png" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/img-7.png" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/img-8.png" alt="Third slide">
+                    </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-contact">
+        <div class="contact"  id="contact">
+            <div class="heading-contact">
+                <h2 class="heading-secondary">
+                    Contact
+                </h2>
+            </div>
+            <div class="heading-WOW">
+                <div class="heading-WOW__quote">"Strangers are just friends waiting to happen"</div>
+                <div class="heading-WOW__name heading-WOW__name_footer"> ~<b> Rod Mckuen</b></div>
+            </div>
+            <div class="row">
+                <div>
+                    If you want to collaborate and make magic in an amazing experience &ndash; you're very welcome to contact me.
+                    <p>I'm available for freelance projects, part-time and full-time employment.</p>
+                    <div class="contact-details">
+                        <div class="contact-details__script">~ Justin Nnaka<br>
+                            <div class="contact-details__script-number">
+                                <ion-icon name="phone-portrait-outline" class="icon__phone"></ion-icon>+234 703 522 0770 <br>
+                            </div>
+                            
+                            <!-- <h4>Tech. enthusiast</h4> -->
+                        </div>
+    
+                        <div class="contact-details__imprint">
+                            <a href="#popup" class="btnn-text" >
+                                <a href="MyCV.pdf" download><img class="contact-download" src="./img/DownloadCv.png" alt="DownloadCv"></a>
+                                <button class=" btnn btnn--blue">
+                                    IMPRINT
+                                </button>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="https://wwww.facebook.com/nnaka.justin"><ion-icon class="about-social__icon icon__fb" name="logo-facebook"></ion-icon></a>
+            <a href="https://www.twitter.com/justincul"><ion-icon class="about-social__icon icon__twitter" name="logo-twitter"></ion-icon></a>
+            <a href="http://wa.me/2347035220770?text=Hi%20can%20we%20collaborate,%20I%27m"><ion-icon class="about-social__icon icon__wa" name="logo-whatsapp"></ion-icon></a>
+            <a href="https://instagram.com/justencul"><ion-icon class="about-social__icon icon__i" name="logo-instagram"></ion-icon></a>
+        </div>
+        <div class="footer-cr">
+            <img src="./img/logo-print.png" alt="Jcul logo" class="footer-cr__img">
+            <span>&copy; 2021</span>
+        </div>
+    </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="popup-content__heading">
+                <a href="#contact" class="popup__close">×</a>
+                <h3 class="popup-heading">Imprint</h3>
+            </div>
+            <div class="popup-content__text"></div>
+                Justin Nnaka <br>
+                Ejigbo, Lagos State <br>
+                Nigeria. <br>
+                <a class="popup-content__text-link" href="#">justincul01@gmail.com</a>
+
+                <h5>Content</h5>
+                <span>Justin Nnaka reserves the right not to be responsible for the topicality,
+                    correctness, completeness or quality of the information provided. Liability
+                    claims regarding damage caused by the use of any information provided, including 
+                    any kind of information which is incomplete or incorrect,will therefore be rejected. 
+                    All offers are not-binding and without obligation. Parts of the pages or the 
+                    complete publication including all offers and information might be extended, 
+                    changed or partly or completely deleted by the author without separate announcement. 
+                </span>
+                <h5>Referrals and Links</h5>
+                <span>Justin Nnaka is not responsible for any contents linked or referred to from this pages
+                     - unless Justin Nnaka has full knowledge of illegal contents and would be able to prevent
+                      the visitors of Justin Nnaka's site from viewing those pages. If any damage occurs by 
+                      the use of information presented there, only the author of the respective pages might be 
+                      liable, not the one who has linked to these pages. Furthermore Justin Nnaka is not liable 
+                      for any postings or messages published by users of discussion boards, guestbooks or mailinglists
+                        provided on his page.  
+                </span>
+                <h5>Legal Validity of this disclaimer</h5>
+                <span>This disclaimer is to be regarded as part of the internet publication which you were referred from.
+                     If sections or individual terms of this statement are not legal or correct, the content or validity 
+                     of the other parts remain uninfluenced by this fact. 
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="./main.js"></script>
+    
+</body>
